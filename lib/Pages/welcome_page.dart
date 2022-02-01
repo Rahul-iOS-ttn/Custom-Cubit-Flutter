@@ -1,3 +1,5 @@
+import 'package:custom_cubit_application/Widgets/app_text.dart';
+import 'package:custom_cubit_application/Widgets/app_title_text.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -28,7 +30,27 @@ class _WelcomePageState extends State<WelcomePage> {
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage("img/"+images[index],),
+              fit: BoxFit.cover,
           ),
+          ),
+          child: Container(
+            margin: const EdgeInsets.only(top: 150, left: 20, right: 20,),
+            child: Row(children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const AppTitleText(text: "Trips"),
+                  const AppText(text: "Mountain", size: 30.0,),
+                  const SizedBox(height: 20,),
+                  Container(
+                    width: 250, 
+                    child: const AppText(
+                      text: "Mountain hikes give you an incredible sense of freedom along with endurance",
+                      ),
+                    ),
+                ],
+              )
+            ],),
           ),
         );
       }),
