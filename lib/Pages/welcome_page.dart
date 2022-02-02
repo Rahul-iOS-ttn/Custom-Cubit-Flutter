@@ -1,6 +1,11 @@
-import 'package:custom_cubit_application/Widgets/app_text.dart';
-import 'package:custom_cubit_application/Widgets/app_title_text.dart';
 import 'package:flutter/material.dart';
+
+
+import '../Theming/colors.dart';
+import '../Widgets/app_text.dart';
+import '../Widgets/app_title_text.dart';
+import '../Widgets/responsive_button.dart';
+
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({ Key? key }) : super(key: key);
@@ -35,7 +40,9 @@ class _WelcomePageState extends State<WelcomePage> {
           ),
           child: Container(
             margin: const EdgeInsets.only(top: 150, left: 20, right: 20,),
-            child: Row(children: [
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -48,7 +55,22 @@ class _WelcomePageState extends State<WelcomePage> {
                       text: "Mountain hikes give you an incredible sense of freedom along with endurance",
                       ),
                     ),
+                  const SizedBox(height: 40,),
+                  ResponsiveButton(width: 120,)
                 ],
+              ),
+              Column(
+                children: List.generate(3, (indexDots) {
+                  return Container(
+                    margin: const EdgeInsets.only(bottom: 2),
+                    width: 8,
+                    height:(index == indexDots) ? 25 : 8,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: (index == indexDots) ? AppColors.mainColor : AppColors.mainColor.withOpacity(0.3),
+                    ),
+                  );
+                }),
               )
             ],),
           ),
