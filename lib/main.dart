@@ -1,4 +1,5 @@
 import 'package:custom_cubit_application/Pages/bottom_nav_pages/bottom_nav.dart';
+import 'package:custom_cubit_application/Pages/detail_page.dart';
 import 'package:flutter/material.dart';
 import './Pages/welcome_page.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const BottomNav(),
+      home: const DetailPage(),
     );
   }
 }
