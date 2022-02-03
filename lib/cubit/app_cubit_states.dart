@@ -1,10 +1,8 @@
-import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
 
 abstract class CubitStates extends Equatable {}
 
-class InitialStates extends CubitStates {
+class InitialState extends CubitStates {
   @override
   List<Object> get props => [];
   
@@ -12,7 +10,7 @@ class InitialStates extends CubitStates {
 
 
 
-class WelcomeStates extends CubitStates {
+class WelcomeState extends CubitStates {
   @override
   List<Object> get props => [];
   
