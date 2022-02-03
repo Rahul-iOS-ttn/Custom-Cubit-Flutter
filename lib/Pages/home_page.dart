@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../Theming/colors.dart';
 import '../Widgets/app_text.dart';
 import '../Widgets/app_title_text.dart';
+import '../cubit/app_cubit_states.dart';
+import '../cubit/app_cubits.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({ Key? key }) : super(key: key);
@@ -26,7 +29,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     TabController _tabController = TabController(length: 3, vsync: this);
 
     return Scaffold(
-      body: Column(
+      body: BlocBuilder<AppCubits, CubitStates>(
+        builder: (context, state) {
+
+          if(state is LoadedState) {
+
+            var info = state.places;
+
+            return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           //Appbar styling
@@ -91,14 +101,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.white,
-                    image: const DecorationImage(
-                      image: AssetImage("img/mountain.jpeg"),
+                    image: DecorationImage(
+                      image: NetworkImage("http://mark.bslmeiyu.com/uploads/" + info[index].img),
                       fit: BoxFit.cover,
                     ),
                   ),
                 );
                 },
-                itemCount: 3,
+                itemCount: info.length,
                 scrollDirection: Axis.horizontal,
               ),
               const Text("There"),
@@ -155,7 +165,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
           )
         ],
-      ),
+      );
+          } else {
+            return Container();
+          }
+        },
+        ),
     );
   }
 }
