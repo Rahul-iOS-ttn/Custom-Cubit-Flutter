@@ -1,5 +1,3 @@
-import 'package:custom_cubit_application/cubit/app_cubit_states.dart';
-import 'package:custom_cubit_application/cubit/app_cubits.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -8,6 +6,8 @@ import '../Widgets/app_buttons.dart';
 import '../Widgets/app_text.dart';
 import '../Widgets/app_title_text.dart';
 import '../Widgets/responsive_button.dart';
+import '../../cubit/app_cubit_states.dart';
+import '../../cubit/app_cubits.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({Key? key}) : super(key: key);
