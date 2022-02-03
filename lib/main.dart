@@ -1,3 +1,4 @@
+import 'package:custom_cubit_application/Services/data_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: BlocProvider(
-        create: (context) => AppCubits(),
+        create: (context) => AppCubits(data: DataServices()),
         child: const AppCubitLogics(),
       ),
     );

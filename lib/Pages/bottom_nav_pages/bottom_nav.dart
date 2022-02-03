@@ -14,10 +14,10 @@ class BottomNav extends StatefulWidget {
 class _MainPageState extends State<BottomNav> {
 
   List pages = [
-    HomePage(),
-    AnalyticsPage(),
-    SearchPage(),
-    MyPage()
+    const HomePage(),
+    const AnalyticsPage(),
+    const SearchPage(),
+    const MyPage()
   ];
   int currentIndex = 0;
 

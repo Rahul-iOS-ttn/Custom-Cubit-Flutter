@@ -1,6 +1,5 @@
 import 'package:custom_cubit_application/Widgets/app_text.dart';
 import 'package:flutter/material.dart';
-import '../Theming/colors.dart';
 
 class AppButtons extends StatelessWidget {
   final Color color;

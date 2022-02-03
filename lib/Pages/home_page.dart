@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 labelColor: Colors.black54,
                 unselectedLabelColor: Colors.grey,
                 isScrollable: true,
-                indicator: CircleTabIndicator(color: AppColors.mainColor, radius: 4),
+                indicator: const CircleTabIndicator(color: AppColors.mainColor, radius: 4),
                 tabs: const [
                   Tab(text: "Places",),
                   Tab(text: "Inspiration",),
@@ -101,13 +101,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 itemCount: 3,
                 scrollDirection: Axis.horizontal,
               ),
-              Text("There"),
-              Text("Bye"),
+              const Text("There"),
+              const Text("Bye"),
               ],
             ),
           ),
 
-          SizedBox(height: 30,),
+          const SizedBox(height: 30,),
           // Explore more
           Container(
             margin: const EdgeInsets.only(left: 20, right: 20),
@@ -166,9 +166,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 class CircleTabIndicator extends Decoration {
 
   final Color color;
-  double radius;
+  final double radius;
 
-  CircleTabIndicator({required this.color, required this.radius});
+  const CircleTabIndicator({required this.color, required this.radius});
 
   @override
   BoxPainter createBoxPainter([VoidCallback? onChanged]) {

@@ -5,10 +5,8 @@ class AnalyticsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        child: const Text("Analytics Page"),
-      ),
+    return const Center(
+      child: Text("Analytics Page"),
     );
   }
 }
