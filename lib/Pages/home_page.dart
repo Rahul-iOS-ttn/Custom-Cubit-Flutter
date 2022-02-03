@@ -94,19 +94,24 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               children: [
                 ListView.builder(itemBuilder: (_, index){
                   
-                  return Container(
-                  width: 200,
-                  height: 300,
-                  margin: const EdgeInsets.only(right: 15, top: 10),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.white,
-                    image: DecorationImage(
-                      image: NetworkImage("http://mark.bslmeiyu.com/uploads/" + info[index].img),
-                      fit: BoxFit.cover,
+                  return GestureDetector(
+                    onTap: () {
+                      BlocProvider.of<AppCubits>(context).getToDetailPage(info[index]);
+                    },
+                    child: Container(
+                    width: 200,
+                    height: 300,
+                    margin: const EdgeInsets.only(right: 15, top: 10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      image: DecorationImage(
+                        image: NetworkImage("http://mark.bslmeiyu.com/uploads/" + info[index].img),
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                  ),
-                );
+                                  ),
+                  );
                 },
                 itemCount: info.length,
                 scrollDirection: Axis.horizontal,
