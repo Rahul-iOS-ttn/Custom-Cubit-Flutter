@@ -1,0 +1,16 @@
+current directory: /Volumes/Macinosh-SSD-Data/Flutter Dev env/Flutter Applications/custom_cubit_application/android/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8/ext/unf_ext
+/Users/ttn/.rvm/rubies/ruby-3.1.0/bin/ruby -I /Users/ttn/.rvm/rubies/ruby-3.1.0/lib/ruby/site_ruby/3.1.0 -r ./siteconf20220208-21679-cvk40p.rb extconf.rb
+checking for -lstdc++... yes
+creating Makefile
+
+current directory: /Volumes/Macinosh-SSD-Data/Flutter Dev env/Flutter Applications/custom_cubit_application/android/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8/ext/unf_ext
+make DESTDIR\= clean
+
+current directory: /Volumes/Macinosh-SSD-Data/Flutter Dev env/Flutter Applications/custom_cubit_application/android/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8/ext/unf_ext
+make DESTDIR\=
+compiling unf.cc
+linking shared-object unf_ext.bundle
+
+current directory: /Volumes/Macinosh-SSD-Data/Flutter Dev env/Flutter Applications/custom_cubit_application/android/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8/ext/unf_ext
+make DESTDIR\= install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 unf_ext.bundle ./.gem.20220208-21679-dka6fh
